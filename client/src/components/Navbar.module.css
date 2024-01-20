@@ -1,0 +1,143 @@
+.navbar_sideBar_container {
+  width: 100%;
+  position: sticky;
+}
+.navbar {
+  display: flex;
+  padding: 0rem 2rem;
+  background-color: var(--main-bg-color);
+  align-items: center;
+  gap: 0rem 2rem;
+}
+.navbar_company_logo img {
+  height: 4rem;
+}
+.navbar_pages {
+  display: flex;
+  flex: 1;
+  gap: 0 1rem;
+}
+.navbar_searchBox {
+  display: flex;
+  gap: 1rem;
+}
+.navbar_searchBox input {
+  height: 2rem;
+  border-radius: 2rem;
+  width: 14rem;
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 16px;
+}
+.navbar_login_signUp_Btn {
+  display: flex;
+  gap: 1rem;
+}
+.navbar_sideBar {
+  display: none;
+}
+.navbar_sideBar_logo {
+  font-size: 2rem;
+  color: var(--main-text-color);
+}
+.signUp_btn,
+.login_btn {
+  font-size: 16px;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color-light);
+  padding: 0.43rem 1rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+/* .navbar_page:hover, */
+.login_btn:hover,
+.signUp_btn:hover {
+  background-color: var(--hover-color);
+  color: var(--main-bg-color);
+  border-radius: 2rem;
+}
+.sideBar_content {
+  background-color: var(--main-bg-color-light);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.sideBar_halfContent {
+  display: flex;
+  gap: 2rem;
+  display: none;
+}
+.sideBar_fullContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  display: none;
+  color: var(--main-text-color);
+}
+@media screen and (max-width: 1262px) {
+  .navbar_sideBar {
+    display: block;
+  }
+  .navbar_login_signUp_Btn {
+    display: none;
+  }
+  .sideBar_content {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sideBar_halfContent {
+    display: block;
+    display: flex;
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar_pages {
+    display: none;
+  }
+  .sideBar_halfContent {
+    display: none;
+  }
+  .sideBar_fullContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-bottom: 1rem;
+  }
+  .navbar_searchBox {
+    width: 100%;
+    justify-content: center;
+  }
+  .navbar_company_logo,
+  .navbar_sideBar {
+    justify-content: space-evenly;
+    order: -1;
+    flex: 0 0 0%;
+  }
+  .navbar_company_logo img {
+    text-align: center;
+  }
+}
